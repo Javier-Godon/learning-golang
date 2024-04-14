@@ -70,7 +70,7 @@ func main() {
 	fmt.Println(myMap2["foo"])
 	//
 	var age, isKeyInTheMap = myMap2["Adam"]
-	fmt.Printf("value %v and boolean if the key is in the map %v", age, isKeyInTheMap)
+	fmt.Printf("value (%v) and boolean (%v) if the key is in the map ", age, isKeyInTheMap)
 	fmt.Println("")
 
 	age, isKeyInTheMap = myMap2["foo"]
@@ -82,6 +82,37 @@ func main() {
 		fmt.Println("")
 	}
 
-	// min 24:30
+	//***** ITERATIONS
+
+	for name, age := range myMap2 {
+		fmt.Printf("Name: %v, Age: %v\n", name, age)
+	}
+
+	for index, value := range intArr {
+		fmt.Printf("Index: %v, Value: %v\n", index, value)
+	}
+
+	var i = 0
+	for i < 10 {
+		fmt.Println(i)
+		i = i + 1
+	}
+
+	fmt.Println("*****  version two  *******")
+
+	i = 0
+	for {
+		if i >= 10 {
+			break
+		}
+		fmt.Println(i)
+		i = i + 1
+	}
+
+	fmt.Println("*****  version three  *******")
+
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+	}
 
 }
