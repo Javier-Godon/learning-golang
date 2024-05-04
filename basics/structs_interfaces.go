@@ -72,6 +72,4 @@ func main() {
 	var myElectricEngine = electricEngine{10, 10, owner{"Jonny"}}
 	canMakeItUsingInterface(myElectricEngine, 50)
 
-	//35:18
-
 }
