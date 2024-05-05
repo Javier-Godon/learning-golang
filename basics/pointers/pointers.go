@@ -4,25 +4,27 @@ import "fmt"
 
 func main() {
 
-	var pointer *int32 = new(int32)
+	var pointer = new(int32)
 	var regularVariable int32
-	fmt.Printf("The value pointer points to is: %v", *pointer)
-	fmt.Printf("\nThe value of regular variable is: %v", regularVariable)
+	fmt.Printf("Pointer points to: %v\n", pointer)
+	fmt.Printf("Pointer points to: %v\n", &pointer)
+	fmt.Printf("The value of pointer is: %v\n", *pointer)
+	fmt.Printf("The value of regular variable is: %v\n", regularVariable)
 
 	*pointer = 10
-	fmt.Printf("\nThe value pointer points to is: %v", *pointer)
+	fmt.Printf("The value pointer is: %v\n", *pointer)
 
 	//& to get the address instead of the value
 
 	pointer = &regularVariable
 	*pointer = 100
 	//now both variables change because they point to the same address
-	fmt.Printf("\nThe value pointer points to is: %v", *pointer)
-	fmt.Printf("\nThe value of regular variable is: %v", regularVariable)
+	fmt.Printf("The value of pointer is: %v\n", *pointer)
+	fmt.Printf("The value of regular variable is: %v\n", regularVariable)
 
 	var k int32 = 2
 	regularVariable = k
-	fmt.Printf("\nThe value of regular variable is: %v\n", regularVariable)
+	fmt.Printf("The value of regular variable is: %v\n", regularVariable)
 
 	var slice = []int32{1, 2, 3}
 	var sliceCopy = slice

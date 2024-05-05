@@ -5,7 +5,8 @@ sql:
     queries: "./db/query/"
     schema: "./db/migrations/"
     database:
-      uri: postgresql://postgres:postgres@localhost:31544/postgres
+#      uri: postgresql://postgres:postgres@localhost:31544/postgres
+      uri: postgresql://postgres:postgres@localhost:5444/postgres
     gen:
       go:
         package: "db"
@@ -17,3 +18,4 @@ sql:
 #        with a parameter limit of 1 it creates a parameter object that groups all parameters
         query_parameter_limit: 1
         emit_exact_table_names: false
+        emit_empty_slices: true

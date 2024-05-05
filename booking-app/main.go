@@ -6,6 +6,10 @@ func main() {
 	conferenceName := "Go Conference"
 	const availableConferenceTickets uint = 50
 	const errorMessage = "Ooops error"
+	var bookings [50]string
+	var sliceBookings []string
+	var interactionsCounter = 0
+
 	var remainingTickets uint = availableConferenceTickets
 	fmt.Printf("Welcome to %v\n", conferenceName)
 	fmt.Printf("They are still available %v tickets\n", remainingTickets)
@@ -38,10 +42,26 @@ func main() {
 		fmt.Printf("%v %v", errorMessage, err)
 	}
 
+	bookings[interactionsCounter] = fmt.Sprintf("%v %v", firstName, lastName)
+	interactionsCounter += 1
+	strings := append(sliceBookings, fmt.Sprintf("%v %v", firstName, lastName))
+
 	fmt.Printf("Hello %v %v\n", firstName, lastName)
 	remainingTickets -= userTickets
 	fmt.Printf("%v you have bought %v tickets\n", firstName, userTickets)
-	fmt.Printf("They are still available %v tickets\n", remainingTickets)
+	fmt.Printf("They are still available %v tickets for %v \n", remainingTickets, conferenceName)
 
-	//min 54:03 //https://www.youtube.com/watch?v=yyUHQIec83I
+	fmt.Printf("The whole array: %v\n", bookings)
+	fmt.Printf("The first element: %v\n", bookings[0])
+	fmt.Printf("The type: %T\n", bookings)
+	fmt.Printf("The length of the array: %v\n", len(bookings))
+
+	fmt.Printf("The whole slice: %v\n", strings)
+	fmt.Printf("The first element: %v\n", strings[0])
+	fmt.Printf("The type: %T\n", strings)
+	fmt.Printf("The length of the slice: %v\n", len(strings))
+
+	//https://www.youtube.com/watch?v=yyUHQIec83I
+	//min 1:11:15
+
 }
